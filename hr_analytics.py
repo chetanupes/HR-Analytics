@@ -50,8 +50,7 @@ st.write('This project demonstrates how analytics can be used to tackle a costly
 st.write('In this work, we will attempt to get insights about:')
 
 st.write('1. What are the key indicators about an employee leaving the company?')
-st.write('Data used in this study was retrieved from IBM Website')
-
+st.write('Data used in this study was retrieved from IBM Website') 
 st.markdown( """<a href="https://developer.ibm.com/technologies/data-science/patterns/data-science-life-cycle-in-action-to-solve-employee-attrition-problem/?mhsrc=ibmsearch_a&mhq=hr%20analytics%20dataset">Dataset Link</a>""", unsafe_allow_html=True,)
 
 #Loading the data
@@ -102,7 +101,7 @@ def viz(cat):
         for i in range(len(df_all)):
         #fig=make_subplots(rows=len(new_col),cols=1)
     
-            fig=px.bar(df_all[i], x=df_all[i].iloc[:,0], y=df_all[i].iloc[:,3], color_discrete_sequence =['grey']*len(df_all[i]), text=round(df_all[i].iloc[:,3],2))
+            fig=px.bar(df_all[i], x=df_all[i].iloc[:,0], y=df_all[i].iloc[:,3], color_discrete_sequence =['pink']*len(df_all[i]), text=round(df_all[i].iloc[:,3],2))
             fig.update_layout(showlegend=False, autosize=True, title_text='Percentage of people left by {}'.format(new_col[i]))
     
             fig.update_yaxes(title_text='Percentage (%)')  
@@ -131,6 +130,8 @@ def viz(cat):
             st.plotly_chart(fig1, use_container_width=True)
 
 viz(Select_viz)
+##################################################################################################################################################################################
+
 #Modeling
 # Create a label encoder object
 le = LabelEncoder()
