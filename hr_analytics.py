@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 import plotly.express as px
 from plotly.subplots import make_subplots
 import seaborn as sns
@@ -69,7 +69,7 @@ st.text('The profiling function presents the user with a descriptive statistical
 #Getting insights into the dataset
 
 new_col=['Department', 'EducationField', 'Gender', 'JobRole',
-       'MaritalStatus', 'OverTime','JobLevel','JobInvolvement','NumCompaniesWorked','WorkLifeBalance','StockOptionLevel','EnvironmentSatisfaction','JobSatisfaction','RelationshipSatisfaction','BusinessTravel', ]
+       'MaritalStatus', 'OverTime','JobLevel','WorkLifeBalance','StockOptionLevel','EnvironmentSatisfaction','JobSatisfaction','RelationshipSatisfaction','BusinessTravel']
 
 #Creating a dataframe for each attribute which explores the dataset by the people left the company
 
@@ -207,7 +207,19 @@ def model(sel):
         viz1.fit(X_train, y_train)
         #Plot
         st_yellowbrick(viz1)
-   
-st.title('Top 10 features contributing to Employees Attrition/Retention')
+
+st.title('Few Conclusions from the Visual Analysis')
+
+st.write('1. Single employees show the largest proportion of leavers, compared to Married and Divorced counterparts.')
+st.write('2. People who travel frequently show higher proportion of leavers compared to their counterparts. This also alligns with maximum attrition with the Sales Department.')
+st.write('3. People who have to work overtime show higher proportion of leavers compared to their counterparts.')
+st.write('4. Lower the job satisfaction the wider the gap by attrition status in the levels of income.')
+st.write('5. The higher the total working years the higher the monthly income of an employee.')
+st.write('6. The higher the percent salary hike the higher the performance rating.')
+st.write('7. The higher the years with current manager the higher the years since last promotion.')
+st.write('8. The higher the age the higher the monthly income.')
+
+
+st.title('Top 10 reasons contributing to Employees Attrition/Retention')
 model(Select_method)
 
