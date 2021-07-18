@@ -58,8 +58,9 @@ data=pd.read_csv('HR-Employee-Attrition.csv')
 
 #Creating a profile report
 st.title('Dataset Report')
-profile_hr=ProfileReport(data, title='Profiling Reoprt')
 
+
+profile_hr=ProfileReport(data, title='Profiling Reoprt')
 
 if st.checkbox('Preview Profile Report'):
     st_profile_report(profile_hr)
@@ -192,24 +193,21 @@ rf_classifier = RandomForestClassifier(class_weight = "balanced",random_state=7)
 st.sidebar.markdown("# Machine Learning Models")
 Select_method = st.sidebar.selectbox('Select a model',('Random Forest','Logistic Regression'))
 
+
 def model(sel):
     if sel=='Logistic Regression':
         #fig, ax = plt.subplots(figsize=(20, 10))
         viz = FeatureImportances(modelCV,relative=False,stack=False, topn=10)
-
         viz.fit(X_train, y_train)
-        
         #Plot
         st_yellowbrick(viz)
     else:
         #fig, ax = plt.subplots(figsize=(20, 10))
         viz1 = FeatureImportances(rf_classifier,relative=False,stack=False, topn=10)
-
         viz1.fit(X_train, y_train)
-        
         #Plot
         st_yellowbrick(viz1)
    
-st.title('Top 10 reasons for Employees to leave')
+st.title('Top 10 features contributing to Employees Attrition/Retention')
 model(Select_method)
 
