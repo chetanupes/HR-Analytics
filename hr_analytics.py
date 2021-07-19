@@ -208,7 +208,7 @@ def model(sel):
         #Plot
         st_yellowbrick(viz1)
 
-st.title('Few Conclusions from the Visual Analysis')
+st.title('Few Inference from the Visual Analysis')
 
 st.write('1. Single employees show the largest proportion of leavers, compared to Married and Divorced counterparts.')
 st.write('2. People who travel frequently show higher proportion of leavers compared to their counterparts. This also alligns with maximum attrition with the Sales Department.')
@@ -219,7 +219,17 @@ st.write('6. The higher the percent salary hike the higher the performance ratin
 st.write('7. The higher the years with current manager the higher the years since last promotion.')
 st.write('8. The higher the age the higher the monthly income.')
 
-
 st.title('Top 10 reasons contributing to Employees Attrition/Retention')
 model(Select_method)
+
+st.title('Recommendations')
+st.write('As more data is generated about the employees (New Joiners/recent Leavers) the algorithm can be re-trained using the additional data and theoritically generate more accurate predictions to identify high-risk employees of leaving based on the probabilistic label assigned to each feature variable (i.e. employee) by the algorithm.')
+
+
+st.write('Employees then can be assigned to a "Risk Category" based on the predicted label such that:')
+
+st.write('1. Low-risk for employees with label < 0.6')
+st.write('2. Medium-risk for employees with label between 0.6 and 0.8')
+st.write('3. High-risk for employees with label > 0.8')
+
 
