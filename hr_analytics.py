@@ -211,7 +211,7 @@ def model(sel):
 st.title('Few Inference from the Visual Analysis')
 
 st.write('1. Single employees show the largest proportion of leavers, compared to Married and Divorced counterparts.')
-st.write('2. People who travel frequently show higher proportion of leavers compared to their counterparts. This also alligns with maximum attrition with the Sales Department.')
+st.write('2. People who travel frequently show higher proportion of leavers compared to their counterparts. This also alligns well with high attrition in the Sales Department.')
 st.write('3. People who have to work overtime show higher proportion of leavers compared to their counterparts.')
 st.write('4. Lower the job satisfaction the wider the gap by attrition status in the levels of income.')
 st.write('5. The higher the total working years the higher the monthly income of an employee.')
