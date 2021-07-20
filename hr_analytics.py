@@ -59,7 +59,6 @@ data=pd.read_csv('HR-Employee-Attrition.csv')
 #Creating a profile report
 st.title('Dataset Report')
 
-
 profile_hr=ProfileReport(data, title='Profiling Reoprt')
 
 if st.checkbox('Preview Profile Report'):
@@ -109,7 +108,7 @@ def viz(cat):
             fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
             fig.update_layout(xaxis={'categoryorder':'total descending'})
             fig.update_xaxes(title_text='Category: {}'.format(new_col[i]), visible=True)
-            fig.update_layout(yaxis_range=[0, 40])
+            fig.update_layout(yaxis_range=[0, 45])
 
             # Plot!
             st.plotly_chart(fig, use_container_width=True)
