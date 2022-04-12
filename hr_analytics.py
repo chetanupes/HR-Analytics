@@ -72,7 +72,7 @@ new_col=['Department', 'EducationField', 'Gender', 'JobRole',
 
 #Creating a dataframe for each attribute which explores the dataset by the people left the company
 
-st.title('Data visualization by target: Attrition')
+st.title('Data Vizualization by target: Attrition')
 st.write('Exploring the dataset to understand employees who left the company')
 
 st.sidebar.markdown("# Data Vizualization")
