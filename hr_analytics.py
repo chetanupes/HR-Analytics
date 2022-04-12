@@ -1,4 +1,5 @@
 import pandas as pd
+from markupsafe import escape
 import streamlit as st
 st.set_page_config(layout="wide")
 import plotly.express as px
