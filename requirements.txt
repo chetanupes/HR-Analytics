@@ -7,3 +7,4 @@ streamlit_yellowbrick==0.0.3
 streamlit_pandas_profiling==0.1.2
 ipywidgets==7.7.0
 scikit_learn==1.0.2
+jinja==2-3.1.1
