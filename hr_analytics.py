@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import streamlit as st
 st.set_page_config(layout="wide")
 import plotly.express as px
@@ -13,7 +12,6 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 #Widgets libraries
 import ipywidgets as wd
-from IPython.display import display, clear_output
 from ipywidgets import interactive
 
 #Data Analysis Library
