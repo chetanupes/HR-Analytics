@@ -3,8 +3,6 @@ import streamlit as st
 st.set_page_config(layout="wide")
 import plotly.express as px
 from plotly.subplots import make_subplots
-import seaborn as sns
-import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from streamlit_pandas_profiling import st_profile_report
 import warnings
