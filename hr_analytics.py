@@ -41,7 +41,7 @@ from sklearn.metrics import average_precision_score
 
 #st.title('HCM-Analytics')
 st.markdown("<h1 style='text-align: center; color:black;'>HCM-Analytics</h1>", unsafe_allow_html=True)
-st.write('This project demonstrates how analytics can be used to tackle a costly problem of Employee Attrition. '
+st.write('The current project demonstrates how analytics can be used to tackle a costly problem of Employee Attrition. '
 'Understanding why and when employees are most likely to leave can lead to actions to improve employee retention as well as possibly planning new hiring in advance.')
 st.write('In this work, we will attempt to get insights about:')
 
